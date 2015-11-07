@@ -8,8 +8,5 @@ sig
   val of_result : ('a, Error.t) Result.t -> 'a t
 end
 *)
+include module type of Async.Std.Deferred.Or_error
 
-include OR_ERROR with 
-  module Result = Result and
-  module Error = Core.Std.Error and
-  type 'a t := 'a Async.Std.Deferred.Or_error.t
