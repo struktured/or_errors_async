@@ -22,5 +22,7 @@ remove: [
 ]
 
 depends: [
+  "oasis" {build}
   "ocamlfind"
+  "async"
 ]
