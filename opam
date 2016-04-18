@@ -22,5 +22,5 @@ remove: [
 ]
 
 depends: [
-  "ocamlfind"
+  "ocamlfind" "async" "or_errors"
 ]
