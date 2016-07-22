@@ -1,9 +1,9 @@
 # OASIS_START
-# DO NOT EDIT (digest: 6e076152cda44edc4fdc9ce872915cbd)
+# DO NOT EDIT (digest: b19766dcf9bd11226d6574c36b0bdcb9)
 version = "0.1"
 description =
 "Ocaml Monad, Error, Result, And Or_error backed by Jane Street's Async"
-requires = "threads async core or_errors"
+requires = "threads async or_errors"
 archive(byte) = "or_errors_async.cma"
 archive(byte, plugin) = "or_errors_async.cma"
 archive(native) = "or_errors_async.cmxa"

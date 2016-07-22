@@ -14,7 +14,7 @@ struct
   include (Async_deferred.Or_error : module type of Async_deferred.Or_error with 
     module Monad_infix := Monad_infix)
 
-  module Error = Error
+  module Error = Async_error
   let of_result t = t
   let both (x:'a t) (y : 'b t) : ('a * 'b) t = Result.both x y
 end
