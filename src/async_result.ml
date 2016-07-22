@@ -17,10 +17,17 @@ struct
    let both x y = bind x (fun x' -> map ~f:(fun y' -> (x', y')) y)
 end
 
-
-module Signature : Or_errors.Result.S =
+module Impl_showable =
 struct
-    include Impl
+  include Impl
+  module Showable = Or_errors.Result.Showable.Make(Impl)
+  module type SHOWABLE = module type of Showable with type ('a,'b) t := ('a,'b) t
+  include (Showable : SHOWABLE)
 end
 
-include Impl
+module Signature : Or_errors.Result.SHOWABLE =
+struct
+    include Impl_showable
+end
+
+include Impl_showable
