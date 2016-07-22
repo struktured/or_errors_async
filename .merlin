@@ -1,4 +1,4 @@
 S src/**
 B _build/**
 PKG or_errors
-PKG async core
+PKG async core ppx_deriving.show
