@@ -9,10 +9,10 @@ BuildTools:  ocamlbuild
 Plugins: META (0.4), DevFiles (0.4)
 
 Library "or_errors_async"
-  Pack:               true
+  Pack:               false
   Build:              true
   Path:               src
-  Modules:            Async_result, Async_error, Async_or_error
+  Modules:            Async_result, Async_error, Async_or_error, Or_errors_async
   BuildDepends:       threads, async, or_errors
 
 AlphaFeatures : ocamlbuild_more_args

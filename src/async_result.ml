@@ -1,5 +1,5 @@
 module Deferred = Async.Std.Deferred
-
+open Or_errors.Std
 module Impl =
 struct
   module Monad_infix =
@@ -20,12 +20,12 @@ end
 module Impl_showable =
 struct
   include Impl
-  module Showable = Or_errors.Result.Showable.Make(Impl)
+  module Showable = Result.Showable.Make(Impl)
   module type SHOWABLE = module type of Showable with type ('a,'b) t := ('a,'b) t
   include (Showable : SHOWABLE)
 end
 
-module Signature : Or_errors.Result.SHOWABLE =
+module Signature : Result.SHOWABLE =
 struct
     include Impl_showable
 end

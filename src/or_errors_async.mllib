@@ -1,4 +1,7 @@
 # OASIS_START
-# DO NOT EDIT (digest: 57e4c2550c2872ddc626278c113f9971)
+# DO NOT EDIT (digest: d556e4a08a83c12b649c2ff3edd98cd4)
+Async_result
+Async_error
+Async_or_error
 Or_errors_async
 # OASIS_STOP
